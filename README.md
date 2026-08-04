@@ -18,7 +18,7 @@ El programa evalúa sistemáticamente el espacio de búsqueda mediante recursivi
 ├── in.txt        # Dataset de configuración inicial del tablero
 └── README.md     # Documentación técnica del proyecto
 
-'''
+```
 
 📊 Formato de Entrada (in.txt)
 El programa requiere un archivo de texto plano llamado in.txt en el directorio raíz para inicializar el tablero. Cada línea del archivo debe contener tres valores enteros separados por espacios, correspondientes a: [Fila] [Columna] [Valor] (índices basados en 1).
