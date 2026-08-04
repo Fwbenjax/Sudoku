@@ -17,35 +17,33 @@ El programa evalúa sistemáticamente el espacio de búsqueda mediante recursivi
 ├── sudoku.cpp    # Lógica central, algoritmo de backtracking y punto de entrada
 ├── in.txt        # Dataset de configuración inicial del tablero
 └── README.md     # Documentación técnica del proyecto
-
 ```
-
-📊 Formato de Entrada (in.txt)
+## 📊 Formato de Entrada (in.txt)
 El programa requiere un archivo de texto plano llamado in.txt en el directorio raíz para inicializar el tablero. Cada línea del archivo debe contener tres valores enteros separados por espacios, correspondientes a: [Fila] [Columna] [Valor] (índices basados en 1).
 
-Ejemplo de formato:
+- **Ejemplo de formato:**
 
 1 1 5   # Coloca el número 5 en la fila 1, columna 1
 1 2 3   # Coloca el número 3 en la fila 1, columna 2
 
-🚀 Guía de Instalación y Uso
-Prerrequisitos
+## 🚀 Guía de Instalación y Uso
+- **Prerrequisitos**
 Compilador de C++ (GCC/G++, Clang, o MSVC).
 
 Entorno de terminal (Bash, PowerShell, CMD).
 
-Compilación
+-**Compilación**
 Clona este repositorio y navega al directorio del proyecto. Luego, utiliza el compilador de tu preferencia. Con g++, el comando estándar es:
 
 g++ sudoku.cpp -o sudoku_solver -O2
 
-Ejecución
+-**Ejecución**
 Asegúrate de que el archivo in.txt se encuentre en el mismo directorio que el binario ejecutable.
 
-En entornos Unix/Linux/macOS:
+-**En entornos Unix/Linux/macOS:**
 
 ./sudoku_solver
 
-En entornos Windows:
+-**En entornos Windows:**
 
 .\sudoku_solver.exe
