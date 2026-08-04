@@ -32,18 +32,18 @@ Compilador de C++ (GCC/G++, Clang, o MSVC).
 
 Entorno de terminal (Bash, PowerShell, CMD).
 
--**Compilación**
+**Compilación**
 Clona este repositorio y navega al directorio del proyecto. Luego, utiliza el compilador de tu preferencia. Con g++, el comando estándar es:
 
 g++ sudoku.cpp -o sudoku_solver -O2
 
--**Ejecución**
+**Ejecución**
 Asegúrate de que el archivo in.txt se encuentre en el mismo directorio que el binario ejecutable.
 
--**En entornos Unix/Linux/macOS:**
+- **En entornos Unix/Linux/macOS:**
 
 ./sudoku_solver
 
--**En entornos Windows:**
+- **En entornos Windows:**
 
 .\sudoku_solver.exe
