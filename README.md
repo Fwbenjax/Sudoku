@@ -1,35 +1,49 @@
-# 🧩 Solucionador de Sudoku en C++ (Backtracking)
+# Sudoku Solver | C++ Backtracking Implementation
 
-Este es un programa en C++ que resuelve rompecabezas de Sudoku clásicos (9x9) utilizando el algoritmo de Backtracking (Vuelta atrás)[cite: 1]. El programa lee la configuración inicial del tablero desde un archivo de texto, procesa la solución y la imprime en la consola con un formato amigable[cite: 1].
+Este repositorio contiene una implementación eficiente en C++ para la resolución automática de tableros de Sudoku (9x9). El motor de resolución está fundamentado en el algoritmo de **Backtracking** (vuelta atrás), un enfoque clásico para problemas de satisfacción de restricciones (CSP).
 
----
+El programa evalúa sistemáticamente el espacio de búsqueda mediante recursividad, validando en tiempo real las reglas del juego para encontrar la solución óptima sin agotar innecesariamente la memoria.
 
-## 🚀 Características
+## ⚙️ Características Técnicas
 
-* **Algoritmo Eficiente:** Implementación limpia y eficiente del algoritmo de Backtracking mediante recursividad[cite: 1].
-* **Lectura Automática:** Carga automatizada de los valores iniciales del tablero a través del archivo `in.txt`[cite: 1].
-* **Formato Visual:** Interfaz de consola que imprime de forma clara y dividida tanto el tablero inicial como el resuelto[cite: 1].
+- **Algoritmo Optimizado:** Implementación recursiva que poda el árbol de búsqueda inmediatamente cuando se detecta una violación de las restricciones del Sudoku.
+- **Validación de Restricciones:** Comprobación algorítmica de unicidad en filas, columnas y subcuadrículas de 3x3 en tiempo constante relativo.
+- **Manejo de I/O (Entrada/Salida):** Carga automatizada del estado inicial del tablero mediante redirección de flujos estándar (`stdin`) a través de un archivo de configuración, desacoplando los datos de la lógica del código.
+- **Renderizado en Consola:** Formateo visual de matrices para una depuración y visualización clara tanto del input como del output.
 
----
+## 📂 Arquitectura del Proyecto
 
-## 📁 Estructura del Proyecto
+```text
+├── sudoku.cpp    # Lógica central, algoritmo de backtracking y punto de entrada
+├── in.txt        # Dataset de configuración inicial del tablero
+└── README.md     # Documentación técnica del proyecto
 
-* `sudoku.cpp`: Contiene el código fuente, la lógica de validación y el algoritmo principal[cite: 1].
-* `in.txt`: Archivo de entrada que almacena las coordenadas y los valores iniciales de las pistas del Sudoku[cite: 1].
+📊 Formato de Entrada (in.txt)
+El programa requiere un archivo de texto plano llamado in.txt en el directorio raíz para inicializar el tablero. Cada línea del archivo debe contener tres valores enteros separados por espacios, correspondientes a: [Fila] [Columna] [Valor] (índices basados en 1).
 
----
+Ejemplo de formato:
 
-## 🛠️ Cómo compilar y ejecutar
+1 1 5   # Coloca el número 5 en la fila 1, columna 1
+1 2 3   # Coloca el número 3 en la fila 1, columna 2
 
-### Requisitos previos
+🚀 Guía de Instalación y Uso
+Prerrequisitos
+Compilador de C++ (GCC/G++, Clang, o MSVC).
 
-Debes tener un compilador de C++ instalado en tu sistema (como `g++`, MinGW para Windows)[cite: 1].
+Entorno de terminal (Bash, PowerShell, CMD).
 
-### Pasos a seguir
+Compilación
+Clona este repositorio y navega al directorio del proyecto. Luego, utiliza el compilador de tu preferencia. Con g++, el comando estándar es:
 
-1. Clona o descarga este repositorio en tu equipo local[cite: 1].
-2. Asegúrate de que el archivo `sudoku.cpp` y el archivo `in.txt` se encuentren en la misma carpeta[cite: 1].
-3. Abre tu terminal (por ejemplo, PowerShell o CMD) y navega hasta la carpeta del proyecto[cite: 1].
-4. Compila el código ejecutando:
-   ```bash
-   g++ sudoku.cpp
+g++ sudoku.cpp -o sudoku_solver -O2
+
+Ejecución
+Asegúrate de que el archivo in.txt se encuentre en el mismo directorio que el binario ejecutable.
+
+En entornos Unix/Linux/macOS:
+
+./sudoku_solver
+
+En entornos Windows:
+
+.\sudoku_solver.exe
